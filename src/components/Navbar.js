@@ -11,45 +11,46 @@ const Navbar=() => {
         setClicked(!clicked)
     }
     return(
-        <nav className="ui secondary menu">
-            <h1 className="title">
+        <>
+        <nav className="ui-secondary-menu">
+            <Link to="/" className="title">
                 React
                 <FaReact className="icon"/>
-            </h1>
-            
+            </Link>
+            <div>
             <ul className={clicked ? 'navMenu active' : 'navMenu'}>
-                <li>
-                <Link to="/" className="item">
+                <li className="item">
+                <Link to="/" className="navLink">
                     Home
                 </Link>
                 </li>
-                <li >
-                <Link to="/" className="item">
+                <li className="item">
+                <Link to="/" className="navLink">
                     Services
                 </Link>
                 </li>
-                <li>
-                <Link to="/" className="item">
+                <li className="item">
+                <Link to="/" className="navLink">
                     Products
                 </Link>
                 </li>
-                <li>
-                <Link to="/ " className="item">
+                <li className="item">
+                <Link to="/ " className="navLink">
                     Contact Us
                 </Link>
                 </li>
-                <li>
-                <Link to="/" className="item-btn">
+                <li className="item">
+                <Link to="/" className="navLink-btn">
                     Sign Up
                 </Link>
                 </li>
-                {/* <button className="btn">Sign Up</button> */}
             </ul>
-            <div className="mobile" onClick={onClickHandler}>
-                {clicked ? <TfiClose className="close"/> : <FaBars className="menu" /> }
             </div>
-            
+            <div className="mobile" onClick={onClickHandler}>
+                <i>{clicked ? <TfiClose className="close"/> : <FaBars className="menu" />}</i>
+            </div>
         </nav>
+        </>
     )
 }
 
