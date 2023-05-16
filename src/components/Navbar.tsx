@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import {FaReact} from "react-icons/fa";
+import React, { useState} from 'react';
+import {FaReact } from 'react-icons/fa';
 import {FaBars} from "react-icons/fa";
 import {TfiClose} from "react-icons/tfi";
 import {Link} from "react-router-dom";
 
-const Navbar=() => {
-    const [clicked, setClicked]=useState(false)
+const Navbar: React.FC = () => {
+    const [clicked, setClicked]=useState<boolean>(false)
 
     const onClickHandler=() => {
         setClicked(!clicked)
     }
-    return(
+    return (
         <>
         <nav className="ui-secondary-menu">
             <Link to="/" className="title">
